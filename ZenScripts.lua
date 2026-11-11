@@ -1,6 +1,6 @@
-return(function(Di6ov, ...)
-local I4a3rz = {"HGlsNprSq8r3p";"wxtfn0nr";"Avo";"drZNK";"IUhN12u59TcLTwAq";"SeN";"caKfTrTI4";"PnXBng0Nx3Y2";"F0DBbjntEobVbEbs";"hONh2VlE";"tsvTVdSffC";"02PzT";"iJRfTZiIEvi2jDCTk";"VT4KhTUqwEJTRy"}
-local 5sAlDGC6 = function(...)
+return(function(lvoqM, ...)
+local RbrNav = {"6ImS7O3rZgifug";"jv0hkBpbvymFl";"3xTDWf2A";"aVPo1L8";"rnrBugR3Wg";"fMQlcZyxWJ054";"PQ1FP";"bHoQbfNHgXMJ8hVG";"Ppw"}
+local hHv5tTeW = function(...)
 -- ZenScripts key loader. Interface adapted from Arqel UI by Cobru (MIT).
 
 repeat task.wait() until game:IsLoaded()
@@ -493,16 +493,16 @@ local function ShowLoadingScreen(onComplete)
 
     local longLines = {}
     local linePositions = {0.15, 0.35, 0.65, 0.85}
-    for cfowyH5M = 1, 4 do
+    for vvKPkoQj = 1, 4 do
         local line = Instance.new(loadstring(base64decode("RnJhbWU="))())
         line.Size = UDim2.new(0.3, 0, 0, mobile and 2 or 3)
-        line.Position = UDim2.new(1.3, 0, linePositions[cfowyH5M], 0)
+        line.Position = UDim2.new(1.3, 0, linePositions[vvKPkoQj], 0)
         line.BackgroundColor3 = Zen.Theme.Text
         line.BackgroundTransparency = 1
         line.BorderSizePixel = 0
         line.Parent = linesContainer
         Instance.new(loadstring(base64decode("VUlDb3JuZXI="))(), line).CornerRadius = UDim.new(1, 0)
-        longLines[cfowyH5M] = line
+        longLines[vvKPkoQj] = line
     end
 
     local shipSize = mobile and 18 or 28
@@ -537,15 +537,15 @@ local function ShowLoadingScreen(onComplete)
 
     local trails = {}
     local trailConfigs = {
-        {X7ElZZqA = 0.20, width = mobile and 45 or 70},
-        {X7ElZZqA = 0.38, width = mobile and 60 or 95},
-        {X7ElZZqA = 0.62, width = mobile and 55 or 85},
-        {X7ElZZqA = 0.80, width = mobile and 40 or 65}
+        {aUD0VGbc = 0.20, width = mobile and 45 or 70},
+        {aUD0VGbc = 0.38, width = mobile and 60 or 95},
+        {aUD0VGbc = 0.62, width = mobile and 55 or 85},
+        {aUD0VGbc = 0.80, width = mobile and 40 or 65}
     }
-    for cfowyH5M, config in ipairs(trailConfigs) do
+    for vvKPkoQj, config in ipairs(trailConfigs) do
         local trail = Instance.new(loadstring(base64decode("RnJhbWU="))())
         trail.Size = UDim2.new(0, config.width, 0, mobile and 2 or 3)
-        trail.Position = UDim2.new(0.5, -15, config.X7ElZZqA, 0)
+        trail.Position = UDim2.new(0.5, -15, config.aUD0VGbc, 0)
         trail.AnchorPoint = Vector2.new(1, 0.5)
         trail.BackgroundColor3 = Zen.Theme.Text
         trail.BackgroundTransparency = 1
@@ -554,7 +554,7 @@ local function ShowLoadingScreen(onComplete)
         local gradient = Instance.new(loadstring(base64decode("VUlHcmFkaWVudA=="))(), trail)
         gradient.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.3, 0.5), NumberSequenceKeypoint.new(1, 0)})
         Instance.new(loadstring(base64decode("VUlDb3JuZXI="))(), trail).CornerRadius = UDim.new(1, 0)
-        trails[cfowyH5M] = {frame = trail, config = config}
+        trails[vvKPkoQj] = {frame = trail, config = config}
     end
 
     local phasesContainer = Instance.new(loadstring(base64decode("RnJhbWU="))())
@@ -574,11 +574,11 @@ local function ShowLoadingScreen(onComplete)
     local phaseNames = {loadstring(base64decode("SW5pdGlhbGl6aW5n"))(), loadstring(base64decode("Q3JlYXRpbmcgZm9sZGVycw=="))(), loadstring(base64decode("RG93bmxvYWRpbmcgYXNzZXRz"))(), loadstring(base64decode("UHJlcGFyaW5nIGludGVyZmFjZQ=="))(), loadstring(base64decode("UmVhZHk="))()}
     local phaseTextSize = mobile and 14 or 18
 
-    for cfowyH5M, name in ipairs(phaseNames) do
+    for vvKPkoQj, name in ipairs(phaseNames) do
         local row = Instance.new(loadstring(base64decode("RnJhbWU="))())
         row.Size = UDim2.new(1, 0, 0, mobile and 22 or 28)
         row.BackgroundTransparency = 1
-        row.LayoutOrder = cfowyH5M
+        row.LayoutOrder = vvKPkoQj
         row.Parent = phasesContainer
 
         local indicator = Instance.new(loadstring(base64decode("VGV4dExhYmVs"))())
@@ -603,7 +603,7 @@ local function ShowLoadingScreen(onComplete)
         label.TextTransparency = 1
         label.Parent = row
 
-        phases[cfowyH5M] = {indicator = indicator, label = label}
+        phases[vvKPkoQj] = {indicator = indicator, label = label}
     end
 
     local animationRunning = true
@@ -613,11 +613,11 @@ local function ShowLoadingScreen(onComplete)
     local function animateLongLines()
         local speeds = {0.8, 1.0, 0.7, 0.9}
         while animationRunning do
-            for cfowyH5M, line in ipairs(longLines) do
+            for vvKPkoQj, line in ipairs(longLines) do
                 task.spawn(function()
-                    line.Position = UDim2.new(1.3, 0, linePositions[cfowyH5M], 0)
+                    line.Position = UDim2.new(1.3, 0, linePositions[vvKPkoQj], 0)
                     line.BackgroundTransparency = 0.5
-                    TweenService:Create(line, TweenInfo.new(speeds[cfowyH5M], Enum.EasingStyle.Linear), {Position = UDim2.new(-0.4, 0, linePositions[cfowyH5M], 0), BackgroundTransparency = 0.9}):Play()
+                    TweenService:Create(line, TweenInfo.new(speeds[vvKPkoQj], Enum.EasingStyle.Linear), {Position = UDim2.new(-0.4, 0, linePositions[vvKPkoQj], 0), BackgroundTransparency = 0.9}):Play()
                 end)
             end
             task.wait(0.5)
@@ -644,13 +644,13 @@ local function ShowLoadingScreen(onComplete)
 
     local function setPhase(num)
         if pulseThread then task.cancel(pulseThread) pulseThread = nil end
-        for cfowyH5M = 1, 5 do
-            local p = phases[cfowyH5M]
-            if cfowyH5M < num then
+        for vvKPkoQj = 1, 5 do
+            local p = phases[vvKPkoQj]
+            if vvKPkoQj < num then
                 p.indicator.Text = loadstring(base64decode("4peP"))()
                 TweenService:Create(p.indicator, TweenInfo.new(0.2), {TextColor3 = Zen.Theme.Success, TextTransparency = 0}):Play()
                 TweenService:Create(p.label, TweenInfo.new(0.2), {TextColor3 = Zen.Theme.Success}):Play()
-            elseif cfowyH5M == num then
+            elseif vvKPkoQj == num then
                 p.indicator.Text = loadstring(base64decode("4peP"))()
                 p.indicator.TextTransparency = 0
                 TweenService:Create(p.indicator, TweenInfo.new(0.2), {TextColor3 = Zen.Theme.Accent}):Play()
@@ -683,10 +683,10 @@ local function ShowLoadingScreen(onComplete)
         task.spawn(animateTrails)
         task.spawn(animateShipShake)
         task.wait(0.2)
-        for cfowyH5M = 1, 5 do
-            task.delay((cfowyH5M-1)*0.08, function()
-                TweenService:Create(phases[cfowyH5M].indicator, TweenInfo.new(0.25), {TextTransparency = 0}):Play()
-                TweenService:Create(phases[cfowyH5M].label, TweenInfo.new(0.25), {TextTransparency = 0}):Play()
+        for vvKPkoQj = 1, 5 do
+            task.delay((vvKPkoQj-1)*0.08, function()
+                TweenService:Create(phases[vvKPkoQj].indicator, TweenInfo.new(0.25), {TextTransparency = 0}):Play()
+                TweenService:Create(phases[vvKPkoQj].label, TweenInfo.new(0.25), {TextTransparency = 0}):Play()
             end)
         end
         task.wait(0.5)
@@ -706,9 +706,9 @@ local function ShowLoadingScreen(onComplete)
         TweenService:Create(shipPoint, TweenInfo.new(0.3), {BackgroundTransparency = 1}):Play()
         for _, trail in pairs(trails) do TweenService:Create(trail.frame, TweenInfo.new(0.3), {BackgroundTransparency = 1}):Play() end
         for _, line in pairs(longLines) do TweenService:Create(line, TweenInfo.new(0.3), {BackgroundTransparency = 1}):Play() end
-        for cfowyH5M = 1, 5 do
-            TweenService:Create(phases[cfowyH5M].indicator, TweenInfo.new(0.25), {TextTransparency = 1}):Play()
-            TweenService:Create(phases[cfowyH5M].label, TweenInfo.new(0.25), {TextTransparency = 1}):Play()
+        for vvKPkoQj = 1, 5 do
+            TweenService:Create(phases[vvKPkoQj].indicator, TweenInfo.new(0.25), {TextTransparency = 1}):Play()
+            TweenService:Create(phases[vvKPkoQj].label, TweenInfo.new(0.25), {TextTransparency = 1}):Play()
         end
         TweenService:Create(blurEffect, TweenInfo.new(0.3), {Size = 0}):Play()
         task.wait(0.5)
@@ -824,8 +824,8 @@ function Zen:Notify(title, message, duration, iconType)
 
     local function restack()
         local yOffset = 0
-        for cfowyH5M = #Internal.NotificationList, 1, -1 do
-            local n = Internal.NotificationList[cfowyH5M]
+        for vvKPkoQj = #Internal.NotificationList, 1, -1 do
+            local n = Internal.NotificationList[vvKPkoQj]
             if n and n.frame and n.frame.Parent then
                 TweenService:Create(n.frame, TweenInfo.new(0.3, Enum.EasingStyle.Quart), {Position = UDim2.new(1, -15, 1, -15 - yOffset)}):Play()
                 yOffset = yOffset + n.height + 12
@@ -838,8 +838,8 @@ function Zen:Notify(title, message, duration, iconType)
     restack()
 
     local function dismiss()
-        for cfowyH5M, n in ipairs(Internal.NotificationList) do
-            if n.id == id then table.remove(Internal.NotificationList, cfowyH5M) break end
+        for vvKPkoQj, n in ipairs(Internal.NotificationList) do
+            if n.id == id then table.remove(Internal.NotificationList, vvKPkoQj) break end
         end
         TweenService:Create(frame, TweenInfo.new(0.3, Enum.EasingStyle.Quart), {Position = UDim2.new(1, width + 20, frame.Position.Y.Scale, frame.Position.Y.Offset)}):Play()
         task.wait(0.3)
@@ -953,12 +953,12 @@ local function CreateChangelogPanel(parent, windowWidth, panelHeight, panelWidth
     contentLayout.Padding = UDim.new(0, 10)
     contentLayout.SortOrder = Enum.SortOrder.LayoutOrder
 
-    for cfowyH5M, update in ipairs(Zen.Changelog) do
+    for vvKPkoQj, update in ipairs(Zen.Changelog) do
         local entry = Instance.new(loadstring(base64decode("RnJhbWU="))())
         entry.Size = UDim2.new(1, 0, 0, 0)
         entry.AutomaticSize = Enum.AutomaticSize.Y
         entry.BackgroundTransparency = 1
-        entry.LayoutOrder = cfowyH5M * 2
+        entry.LayoutOrder = vvKPkoQj * 2
         entry.Parent = scrollFrame
 
         local entryLayout = Instance.new(loadstring(base64decode("VUlMaXN0TGF5b3V0"))(), entry)
@@ -975,7 +975,7 @@ local function CreateChangelogPanel(parent, windowWidth, panelHeight, panelWidth
         versionLabel.LayoutOrder = 1
         versionLabel.Parent = entry
 
-        for j, change in ipairs(update.Changes) do
+        for md8pvNe8, change in ipairs(update.Changes) do
             local changeLabel = Instance.new(loadstring(base64decode("VGV4dExhYmVs"))())
             changeLabel.Size = UDim2.new(1, 0, 0, 0)
             changeLabel.AutomaticSize = Enum.AutomaticSize.Y
@@ -986,15 +986,15 @@ local function CreateChangelogPanel(parent, windowWidth, panelHeight, panelWidth
             changeLabel.Font = Enum.Font.ArimoBold
             changeLabel.TextXAlignment = Enum.TextXAlignment.Left
             changeLabel.TextWrapped = true
-            changeLabel.LayoutOrder = j + 1
+            changeLabel.LayoutOrder = md8pvNe8 + 1
             changeLabel.Parent = entry
         end
 
-        if cfowyH5M < #Zen.Changelog then
+        if vvKPkoQj < #Zen.Changelog then
             local divWrapper = Instance.new(loadstring(base64decode("RnJhbWU="))())
             divWrapper.Size = UDim2.new(1, 0, 0, 2)
             divWrapper.BackgroundTransparency = 1
-            divWrapper.LayoutOrder = cfowyH5M * 2 + 1
+            divWrapper.LayoutOrder = vvKPkoQj * 2 + 1
             divWrapper.Parent = scrollFrame
 
             local div = Instance.new(loadstring(base64decode("RnJhbWU="))())
@@ -2268,10 +2268,10 @@ local function BuildKeyUI()
                 if statusIcon and statusIcon.Parent then statusIcon.Rotation = (statusIcon.Rotation + dt * 360) % 360
                 else if spinConnection then spinConnection:Disconnect() end end
             end)
-            local dots, cfowyH5M = {loadstring(base64decode("Lg=="))(), loadstring(base64decode("Li4="))(), loadstring(base64decode("Li4u"))(), loadstring(base64decode(""))()}, 1
+            local dots, vvKPkoQj = {loadstring(base64decode("Lg=="))(), loadstring(base64decode("Li4="))(), loadstring(base64decode("Li4u"))(), loadstring(base64decode(""))()}, 1
             dotsThread = task.spawn(function()
                 while statusLabel and statusLabel.Parent and statusLabel.Text:find(loadstring(base64decode("VmVyaWZ5aW5n"))(), 1, true) do
-                    statusLabel.Text = text .. dots[cfowyH5M] cfowyH5M = (cfowyH5M % #dots) + 1 task.wait(0.4)
+                    statusLabel.Text = text .. dots[vvKPkoQj] vvKPkoQj = (vvKPkoQj % #dots) + 1 task.wait(0.4)
                 end
             end)
         elseif state == loadstring(base64decode("c3VjY2Vzcw=="))() then color, icon, text = Zen.Theme.Success, getIcon(loadstring(base64decode("Y2hlY2s="))()), customText or loadstring(base64decode("QWNjZXNzIEdyYW50ZWQ="))()
@@ -2461,7 +2461,7 @@ function Zen:ClearSavedKey() return clearKey() end
 getgenv().Zen = Zen
 
 local CFG = {
-    Service = loadstring(base64decode("a2V5"))(),
+    Service = loadstring(base64decode("a2V5YmxveHNwaW4="))(),
     Identifier = loadstring(base64decode("MTIzNDgxOQ=="))(),
     Provider = loadstring(base64decode("a2V5c3lzdGVt"))(),
     ScriptUrl = loadstring(base64decode(""))(),
@@ -2469,29 +2469,21 @@ local CFG = {
 }
 
 local function loadCheat()
-    local ok, err = pcall(function()
-        local source
-        if CFG.ScriptUrl ~= loadstring(base64decode(""))() then
-            source = game:HttpGet(CFG.ScriptUrl)
-        elseif typeof(isfile) == loadstring(base64decode("ZnVuY3Rpb24="))() and isfile(CFG.ScriptFile) then
-            source = readfile(CFG.ScriptFile)
-        end
-        if not source then
-            error(loadstring(base64decode("Y2hlYXQgc2NyaXB0IG5vdCBmb3VuZDogc2V0IFNjcmlwdFVybCBvciBwbGFjZSA="))() .. CFG.ScriptFile .. loadstring(base64decode("IGluIHRoZSB3b3Jrc3BhY2UgZm9sZGVy"))(), 0)
-        end
-        local chunk, parseError = loadstring(source)
-        if not chunk then error(parseError, 0) end
-        chunk()
-    end)
-    if not ok then
-        warn(loadstring(base64decode("W1plblNjcmlwdHNdIA=="))() .. tostring(err))
-        Zen:Notify(loadstring(base64decode("RXJyb3I="))(), loadstring(base64decode("Q291bGQgbm90IHN0YXJ0IHRoZSBzY3JpcHQ="))(), 4, loadstring(base64decode("ZXJyb3I="))())
+    local source
+    if CFG.ScriptUrl ~= loadstring(base64decode(""))() then
+        local ok, body = pcall(game.HttpGet, game, CFG.ScriptUrl)
+        source = ok and body or nil
+    elseif typeof(isfile) == loadstring(base64decode("ZnVuY3Rpb24="))() and isfile(CFG.ScriptFile) then
+        source = readfile(CFG.ScriptFile)
     end
+    if not source then return end
+    local chunk = loadstring(source)
+    if chunk then pcall(chunk) end
 end
 
 if Zen:LaunchJunkie({Service = CFG.Service, Identifier = CFG.Identifier, Provider = CFG.Provider}) then
     loadCheat()
 end
 end
-e6bN0Sz3(DBEsA)
+S9axg4zo(A71Vi)
 end)(...)
